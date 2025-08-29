@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --symbol-color: #a8b0c0;
+            --symbol-opacity: 0.2;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #f3f4f6;
@@ -18,7 +23,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            overflow: hidden;
+            overflow-y: auto;
         }
         .invitation-container {
             width: 100%;
@@ -52,7 +57,7 @@
         .divider {
             width: 80px;
             height: 2px;
-            background-color: #a8b0c0;
+            background-color: var(--symbol-color);
             margin: 1.5rem auto;
             animation: pulse-divider 2s infinite ease-in-out;
         }
@@ -129,7 +134,7 @@
             border-radius: 50%;
             object-fit: cover;
             object-position: center;
-            border: 4px solid #a8b0c0;
+            border: 4px solid var(--symbol-color);
             margin: 0 auto 1.5rem;
             animation: pulse-pic 3s infinite ease-in-out;
         }
@@ -149,8 +154,8 @@
             position: absolute;
             width: 50px;
             height: 50px;
-            fill: #a8b0c0;
-            opacity: 0.2;
+            fill: var(--symbol-color);
+            opacity: var(--symbol-opacity);
             animation-duration: 25s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
@@ -218,7 +223,7 @@
         <h2>Mr Lucas Brako Addo</h2>
         
         <!-- Profile Picture -->
-        <img src="him.jpg">
+        <img src="him.jpg" alt="Profile picture of Mr Lucas Brako Addo" class="profile-pic">
 
         <div class="divider"></div>
         <p class="text-lg">The family cordially invites you to mourn with them</p>
